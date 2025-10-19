@@ -1,0 +1,111 @@
+/* Center calculator on page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator container */
+#calculator {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Top row */
+#top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Result display */
+#result {
+    flex: 3; 
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    text-align: right;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 2px solid #444;
+    margin-right: 10px;
+    line-height: 50px;
+    overflow-x: auto;
+}
+
+/* Rows of buttons */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px; /* uniform spacing between buttons */
+    margin-bottom: 10px;
+}
+
+.row:last-child {
+    display: flex;
+    gap: 6px; /* same as other rows */
+}
+
+/* Buttons style */
+button {
+    flex: 1;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    /* remove margin, use gap on row instead */
+    margin: 0;
+}
+
+/* Operator buttons */
+button.operator {
+    background-color: #ff9500;
+    font-weight: bold;
+}
+
+/* Clear button spans three button widths */
+#clear {
+    background-color: #ff3b30;
+    font-weight: bold;
+    flex: 3; /* span three times */
+    margin: 0; /* remove previous margin */
+}
+
+
+/* Equal button */
+#top,#bottom {
+    display: flex;
+    gap: 6px; /* use gap for spacing between result and = */
+}
+
+#top #result {
+    flex: 3;
+    margin: 0; /* remove previous margin */
+}
+
+#top button  {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
